@@ -1,0 +1,213 @@
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width,initial-scale=1")
+    title Barberlia
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&family=Quicksand:wght@300;400;500;700&display=swap", rel="stylesheet")
+    link(href="index.css", rel="stylesheet")
+  body
+    header
+      .navigation
+        h1.navigation__logo Barberlia
+
+        ul.navigation__links#navigation__links
+          li.navigation__links__link 
+            a(href="#") About
+          li.navigation__links__link 
+            a(href="#") Gallery
+          li.navigation__links__link 
+            a(href="#") Price
+          li.navigation__links__link 
+            a(href="#") Contact
+
+        button.navigation__book Book an appointment
+
+      .menu#menu
+        .menu__lines
+          hr.menu__lines__line
+          hr.menu__lines__line
+          hr.menu__lines__line
+
+    main
+      h1.title On-Demand barbers straight to your home for very reasonable prices
+
+      button.book-mobile Book an appointment
+
+      .landing
+        .landing__first
+          h1.landing__first__header Book a barber right now to experience the best services in the world.
+
+        .landing__second
+          h1.landing__second__header Straight to your home, no extra fees. 
+
+        .landing__learn-more
+          i.fas.fa-hand-scissors.fa-7x.landing__learn-more__hand
+
+          h1.landing__learn-more__question Interested?
+
+          p.landing__learn-more__description Learn more about us by clicking the button below. We're here to give you the freshest cuts and hair styling money can buy!
+
+          button.landing__learn-more__cta Learn more
+
+      .information
+        .information__booking-hours
+          h1.information__booking-hours__title Booking hours
+
+          ul.information__booking-hours__days
+            li.information__booking-hours__days__day Mon: 9 am - 9 pm
+            li.information__booking-hours__days__day Tue: 9 am - 9 pm
+            li.information__booking-hours__days__day Wed: 9 am - 9 pm
+            li.information__booking-hours__days__day Thu: 9 am - 9 pm
+            li.information__booking-hours__days__day Fri: 9 am - 9 pm
+            li.information__booking-hours__days__day Sat: 9 am - 9 pm
+            li.information__booking-hours__days__day Sun: 9 am - 9 pm
+
+        .information__features
+          .information__features__why-us
+            i.far.fa-question-circle.information__features__why-us__icon
+            h1.information__features__why-us__title Why us?
+            p.information__features__why-us__description We're dedicated to offering you the best services available. Our barbers are one of the most professional workers in the country, the booking fees are low and the quality of our work is stellar.
+
+          .information__features__products
+            i.fas.fa-thumbs-up.information__features__products__icon
+            h1.information__features__products__title The best products
+            p.information__features__products__description Our barbers use the most trusted and quality-oriented products. Ranging from professional clippers and world-renowned hair care products, you will feel like a superstar.
+
+      .services
+        h1.services__title Services
+        
+        .services__type
+          .services__type__hair-men
+            h2.services__type__hair-men__category Hair (men)
+
+            ul.services__type__hair-men__options
+              li.services__type__hair-men__options__option &#8226; Haircut
+              li.services__type__hair-men__options__option &#8226; Styling
+              li.services__type__hair-men__options__option &#8226; Dyeing*
+              li.services__type__hair-men__options__option &#8226; Massage*
+              li.services__type__hair-men__options__option &#8226; Warm towels*
+
+          .services__type__hair-women
+            h2.services__type__hair-women__category Hair (women)
+
+            ul.services__type__hair-women__options
+              li.services__type__hair-women__options__option &#8226; Haircut
+              li.services__type__hair-women__options__option &#8226; Styling
+              li.services__type__hair-women__options__option &#8226; Dyeing*
+              li.services__type__hair-women__options__option &#8226; Massage*
+              li.services__type__hair-women__options__option &#8226; Warm towels*
+              li.services__type__hair-women__options__option &#8226; Blowdrying
+              li.services__type__hair-women__options__option &#8226; Straightening
+
+          .services__type__beard
+            h2.services__type__beard__category Beard
+
+            ul.services__type__beard__options
+              li.services__type__beard__options__option &#8226; Trimming
+              li.services__type__beard__options__option &#8226; Shaving
+              li.services__type__beard__options__option &#8226; Styling
+              li.services__type__beard__options__option &#8226; Dyeing*
+              li.services__type__beard__options__option &#8226; Contouring
+              li.services__type__beard__options__option &#8226; Lotioning
+              li.services__type__beard__options__option &#8226; Cologne
+
+        p.services__disclaimer *Depends on the wants and needs of our clients.
+
+      .our-crew
+        h1.our-crew__title Find out more about our crew
+
+        .our-crew__photos
+          .our-crew__photos__stylists
+            p.our-crew__photos__stylists__headline Meet our hair stylists
+
+          .our-crew__photos__barbers
+            p.our-crew__photos__barbers__headline Check out our barbers
+      
+      .reviews
+        i.reviews__detail
+
+        h1.reviews__title Reviews & Opinions
+
+        .reviews__information
+          .reviews__information__carousel-item.reviews__information__carousel-item--visible
+            .reviews__information__carousel-item__user
+              img(src="5.jpg").reviews__information__carousel-item__user__image
+              p.reviews__information__carousel-item__user__data &#8213;  George, 24 years old
+            
+            p.reviews__information__carousel-item__comment I'm very impressed by the quality of my haircut! I met with one of the barbers beforehand (Michael) to discuss how we will approach my cut and he made sure every thing was in order. The crew is very professional and maybe next time I'll come in to style my beard!
+
+          .reviews__information__carousel-item
+            .reviews__information__carousel-item__user
+              img(src="6.jpg").reviews__information__carousel-item__user__image
+              p.reviews__information__carousel-item__user__data &#8213;  Simon, 27 years old
+            
+            p.reviews__information__carousel-item__comment I waited only a couple of days for my appointment, so that was a plus for me from the start! It was impressive to see how skillfully the crew work and I will definitely come back!
+          
+          .reviews__information__carousel-item
+            .reviews__information__carousel-item__user
+              img(src="7.jpg").reviews__information__carousel-item__user__image
+              p.reviews__information__carousel-item__user__data &#8213;  Talia, 33 years old
+            
+            p.reviews__information__carousel-item__comment I met with Laura beforehand to talk about dyeing my hair and she gave me a lot of options for dyes and styling! The actual process was very quick and professional.
+        
+        .reviews__picker
+          button(aria-label="Previous slide").reviews__picker__previous#previous <
+          button(aria-label="Next slide").reviews__picker__forward#next >
+
+      .session
+        h1.session__title What a session is usually like
+        
+        iframe(src="https://www.youtube.com/embed/watch?v=ScMzIvxBSi4").session__video
+
+        p.session__description We like to talk to our clients beforehand to inform them about what they should expect. On-demand barber and hairstylists are a new thing on the market so this experience can be pretty daunting for everyone involved. We've employed a professional crew so don't sweat it too much, we are perfectionists so the hope is that everything is up to your standards!
+
+      .companies
+        h1.companies__title Companies we've worked with
+
+        .companies__brands
+          i.fab.fa-airbnb.companies__brands__logo
+          i.fab.fa-amazon.companies__brands__logo
+          i.fab.fa-dhl.companies__brands__logo
+          i.fab.fa-ebay.companies__brands__logo
+          i.fab.fa-dropbox.companies__brands__logo
+
+        p.companies__interested Interested in being featured here? Shoot us an 
+          a(href="#").companies__interested__email email
+          | .
+
+      .barberlia-shop
+        h1.barberlia-shop__title Barberlia Shop
+        p.barberlia-shop__description Want to buy official Barberlia products? Say no more! We've now opened our own e-shop where you can purchase top-of-the-line hair-care items and official merchandise.
+        button.barberlia-shop__cta Buy now
+
+      .social-media
+        a(href="#").fab.fa-facebook-f.social-media__icon
+        a(href="#").fab.fa-twitter.social-media__icon
+        a(href="#").fab.fa-instagram.social-media__icon
+
+    footer
+      .footer-content
+        .footer-content__columns
+          .footer-content__columns__column
+            h1.footer-content__columns__column__heading HELP
+            p.footer-content__columns__column__sub-heading Contact us
+            p.footer-content__columns__column__sub-heading Money-back guarantee
+            p.footer-content__columns__column__sub-heading Pricing
+            p.footer-content__columns__column__sub-heading Memberships
+            
+          .footer-content__columns__column
+            h1.footer-content__columns__column__heading CREW
+            p.footer-content__columns__column__sub-heading Hair-stylists
+            p.footer-content__columns__column__sub-heading Barbers
+            p.footer-content__columns__column__sub-heading Hiring
+
+          .footer-content__columns__column
+            h1.footer-content__columns__column__heading BUSINESS
+            p.footer-content__columns__column__sub-heading Partnerships
+            p.footer-content__columns__column__sub-heading Sponsors
+            p.footer-content__columns__column__sub-heading Affiliates
+
+        h1.footer-content__logo Barberlia
+
+    script(src="script.js")

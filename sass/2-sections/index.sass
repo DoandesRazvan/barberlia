@@ -1,0 +1,1118 @@
+@import '../0-utilities/_base.sass'
+@import '../0-utilities/_functions.sass'
+@import '../0-utilities/_variables.sass'
+
+// hamburger menu
+.links-show 
+  display: flex !important
+  position: fixed !important
+  flex-direction: column
+  inset: 0
+  background: $darkBlue
+  z-index: 2
+
+  .navigation__links__link 
+    a
+      font:
+        family: $primary
+        weight: 400
+        size: rem(40)
+      color: $grayWhite
+
+    &:not(:nth-child(1))
+      margin-top: rem(20)
+
+.menu-show
+  position: fixed
+  z-index: 3
+  top: rem(20)
+  right: rem(20)
+  margin-top: 0 !important
+  
+  &::before, &::after
+    display: none !important
+
+  .menu__lines__line
+    border-color: $grayWhite
+
+// carousel
+.reviews__information .reviews__information__carousel-item--visible
+  display: block
+
+  animation: Fade 0.3s
+
+.reviews__information__carousel-item--hidden
+  display: none
+
+@keyframes Fade 
+  0% 
+    opacity: 0
+
+  100%
+    opacity: 1
+    transform: opacity ease
+
+body
+  text-align: center // for centering the menu
+
+.navigation
+  display: flex
+  justify-content: space-between
+
+  @media (min-width: $large)
+    padding-left: rem(20)
+
+  &__logo
+    display: block
+    margin: 0 auto
+
+    font:
+      family: $primary
+      weight: 400
+      size: rem(32)
+    text-transform: uppercase
+    color: $darkBlue
+
+    @media (min-width: $medium)
+      font-size: rem(48)
+
+    @media (min-width: $large)
+      margin: 0
+
+      font-size: rem(60)
+
+    // @media (min-width: $xlarge)
+    //   font-size: rem(80)
+
+  &__links
+    display: none
+    position: absolute
+    align-items: center
+    justify-content: center
+
+    list-style: none
+
+    a
+      text-decoration: none
+
+    @media (min-width: $large)
+      display: flex
+      gap: rem(32)
+      width: 100vw
+      height: rem(89)
+      z-index: 0
+      left: 0
+
+      a
+        color: $darkBlue
+
+    // @media (min-width: $xlarge)
+    //   height: rem(120)
+
+    &__link
+      @media (min-width: $large)
+        font:
+          family: $secondary
+          weight: 400
+        text-decoration: none
+        color: $darkBlue
+        font-size: rem(24)
+
+        border-bottom: solid rem(3) transparent
+        transition: border 0.3s ease-in-out
+
+        &:hover
+          border-bottom: solid rem(3) $darkBlue
+
+      // @media (min-width: $xlarge)
+      //   font-size: rem(40)
+
+  &__book
+    display: none
+
+    @media (min-width: $large)
+      display: flex
+      align-items: center
+      justify-content: center
+      width: rem(250)
+      height: rem(89)
+      z-index: 1
+      background: $darkBlue
+
+      font:
+        family: $primary
+        weight: 400
+        size: rem(20)
+      color: $grayWhite
+
+      border: none
+      cursor: pointer
+      transition: background 0.3s ease
+    
+      &:hover
+        background: $yellow
+
+        color: $darkBlue
+
+    // @media (min-width: $xlarge)
+    //   width: rem(330)
+    //   height: rem(120)
+
+    //   font-size: rem(30)
+
+.menu
+  display: inline-flex
+  align-items: center
+  justify-content: space-between
+  height: rem(45)
+  margin-top: rem(40)
+  padding: rem(8) 0
+
+  @media (min-width: $large)
+    display: none
+
+  &__lines
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-direction: column
+    height: 100%
+
+    &__line
+      width: rem(50)
+
+      border:
+        width: rem(2)
+        color: $darkBlue
+        radius: rem(50)
+
+  &::before, &::after
+    content: '\f0c4'
+    display: inline-block
+    color: $yellow
+
+    font:
+      family: 'Font Awesome 6 Free'
+      style: normal
+      variant: normal
+      smoothing: antialiased
+      weight: 900
+      size: rem(32)
+    text:
+      rendering: auto
+  
+  &::before
+    margin-right: rem(100)
+    transform: rotate(180deg)
+
+    @media (min-width: $medium)
+      margin-right: rem(200)
+
+    @media (max-width: 25em)
+      margin-right: rem(50)
+
+  &::after
+    margin-left: rem(100)
+    
+    @media (min-width: $medium)
+      margin-left: rem(200)
+
+    @media (max-width: 25em)
+      margin-left: rem(50)
+
+.title
+  display: block
+  margin-top: rem(40)
+  padding: 0 rem(20)
+
+  font:
+    family: $secondary
+    size: rem(20)
+    weight: 500
+  color: $darkBlue
+
+  @media (min-width: $large)
+    margin-top: rem(60)
+
+  @media (min-width: $xlarge)
+    position: relative
+    margin-top: rem(100)
+
+    font-size: rem(28)
+    line-height: 1.5
+
+    &::before, &::after
+      content: '\f0c4'
+      display: inline-block
+      position: absolute
+
+      font:
+        family: 'Font Awesome 6 Free'
+        style: normal
+        variant: normal
+        smoothing: antialiased
+        weight: 900
+        size: rem(45)
+      text:
+        rendering: auto
+      color: $yellow
+
+    &::before
+      margin-left: rem(-55)
+      top: rem(-14)
+      transform: rotate(180deg)
+
+    &::after
+      margin-left: rem(10)
+      top: rem(-13)
+
+.book-mobile
+  width: 100%
+  height: rem(89)
+  margin-top: rem(40)
+  background: $darkBlue
+
+  font:
+    family: $primary
+    weight: 400
+    size: rem(30)
+  color: $grayWhite
+
+  border: none
+
+  @media (min-width: $medium)
+    font-size: rem(30)
+
+  @media (min-width: $large)
+    display: none
+
+.landing
+  display: flex
+  flex-direction: column
+
+  @media (min-width: $large)
+    flex-direction: row
+    margin-top: rem(60)
+
+  &__first, &__second
+    display: flex
+    align-items: flex-end
+    justify-content: flex-end
+    width: 100%
+    padding: 0 rem(20) rem(10)
+
+    &__header
+      font:
+        family: $secondary
+        weight: 500
+        size: rem(20)
+      text-align: right
+      color: $grayWhite
+
+      @media (min-width: $large)
+        font-size: rem(30)
+
+      @media (min-width: $xlarge)
+        font-size: rem(40)
+
+  &__first
+    height: rem(277)
+    background: linear-gradient(rgba(20, 33, 61, .5), rgba(20, 33, 61, .5)), url('1.jpg') 
+      size: rem(600)
+      position: center
+
+    @media (min-width: $medium)
+      background-size: rem(1000)
+
+    @media (min-width: $large)
+      order: 1
+      height: rem(650)
+  
+  &__second
+    height: rem(277)
+    
+    background: linear-gradient(rgba(20, 33, 61, .5), rgba(20, 33, 61, .5)), url('2.jpg')
+      size: rem(1000)
+      position: center
+
+    @media (min-width: $large)
+      order: 3
+      align-items: flex-start
+      width: 65%
+      height: rem(650)
+      padding-top: rem(10)
+      padding-bottom: 0
+
+  &__learn-more
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    width: 100%
+    height: rem(277)
+
+    background: $darkBlue
+
+    @media (min-width: $medium)
+      height: rem(200)
+
+    @media (min-width: $large)
+      order: 2
+      width: rem(495)
+      height: rem(650)
+      padding-top: rem(40)
+
+    &__hand
+      display: none
+
+      @media(min-width: $large)
+        display: inline
+
+        color: $yellow
+
+    &__question
+      display: none
+      margin-top: auto
+
+      font-size: rem(25)
+
+      @media (min-width: $large)
+        display: block
+
+    &__question, &__description
+      font:
+        family: $primary
+        weight: 400
+      color: $grayWhite
+
+    &__description
+      margin-top: auto
+      padding: 0 rem(20)
+
+      font-size: rem(20)
+
+    &__cta
+      width: 100%
+      height: rem(80)
+      margin-top: auto
+      background: $yellow
+
+      font:
+        family: $primary
+        weight: 400
+        size: rem(30)
+      color: $darkBlue
+
+      border: none
+
+      @media (min-width: $large)
+        transition: background 0.3s ease
+        cursor: pointer
+
+        &:hover
+          background: darken($yellow, 5%)
+          
+          color: lighten($darkBlue, 10%)
+
+.information
+  display: flex
+  flex-direction: column
+  width: 100%
+  background: $yellow
+
+  @media (min-width: $large)
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+
+  &__booking-hours
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    width: 100%
+    height: rem(468)
+    padding: 0 rem(20)
+    background: $darkBlue
+
+    @media (min-width: $large)
+      order: 2
+      flex-grow: 0
+      width: rem(495)
+
+    &__title
+      font:
+        family: $primary
+        weight: 400
+        size: rem(30)
+      color: $grayWhite
+
+      &::after
+        content: ''
+        display: block
+        width: rem(70)
+        height: rem(3)
+        margin: rem(5) auto 0
+        background: darken($grayWhite, 30%)
+
+    &__days__day
+      margin-top: rem(20)
+
+      font:
+        family: $secondary
+        weight: 500
+        size: rem(20)
+      text-transform: uppercase
+      color: $grayWhite
+
+      list-style: none
+
+      &:nth-of-type(1)
+        margin-top: rem(40)
+
+      @media (min-width: $xlarge)
+        font-size: rem(20)
+
+  &__features
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    height: 100%
+    padding: rem(40) rem(20)
+
+    color: $darkBlue
+
+    @media (min-width: $large)
+      flex-direction: row
+      align-items: center
+      justify-content: space-around
+      order: 1
+      gap: 3rem
+      width: 100%
+
+      @media (min-width: $xlarge)
+        gap: 0
+
+    &__why-us, &__products
+      @media (min-width: $large)
+        width: rem(350)
+
+      &__icon
+        font-size: rem(100)
+
+      &__title
+        margin-top: rem(10)
+
+        font:
+          family: $primary
+          weight: 400
+          size: rem(30)
+
+      &__description
+        margin-top: rem(10)
+
+        font:
+          family: $secondary
+          weight: 400
+          size: rem(15)
+        color: lighten($darkBlue, 5%)
+
+        // @media (min-width: $large)
+        //   width: rem(600)
+    
+    &__products
+      margin-top: rem(40)
+
+      @media (min-width: $large)
+        margin-top: 0
+
+.services
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  padding: rem(40) rem(20)
+  background: $darkBlue
+
+  color: $grayWhite
+
+  &__title
+    font:
+      family: $primary
+      weight: 400
+      size: rem(30)
+
+    &::after
+      content: ''
+      display: block
+      width: rem(50)
+      height: rem(3)
+      margin: rem(5) auto 0
+      background: darken($grayWhite, 30%)
+
+    @media (min-width: $large)
+      font-size: rem(40)
+
+      &::after
+        width: rem(60)
+
+  &__type
+    display: flex
+    flex-direction: column
+
+    @media (min-width: $large)
+      flex-direction: row
+      gap: rem(150)
+
+    &__hair-men, &__hair-women, &__beard
+      margin-top: rem(40)
+
+      @media (min-width: $large)
+        display: flex // for aligning h2 to the left
+        align-items: flex-start
+        flex-direction: column
+
+      &__category
+        font:
+          family: $secondary
+          weight: 700
+          size: rem(20)
+
+        @media (min-width: $large)
+          font-size: rem(30)
+
+      &__options
+        margin-top: rem(20)
+
+        @media (min-width: $large)
+          display: flex
+          align-items: flex-start
+          flex-direction: column
+
+        &__option
+          font:
+            family: $secondary
+            weight: 300
+            size: rem(15)
+          
+          list-style: none
+
+          &:not(:nth-child(1))
+            margin-top: rem(10)
+          
+          @media (min-width: $large)
+            font-size: rem(25)
+
+  &__disclaimer
+    margin-top: rem(40)
+
+    font:
+      family: $secondary
+      weight: 300
+      size: rem(20)
+    color: darken($grayWhite, 25%)
+
+    @media (min-width: $large)
+      font-size: rem(30)
+
+.our-crew
+  padding: rem(40) 0 0
+
+  &__title
+    padding: 0 rem(20)
+
+    font:
+      family: $primary
+      weight: 400
+      size: rem(30)
+    color: $darkBlue
+
+  &__photos
+    @media (min-width: $large)
+      display: flex
+      justify-content: space-between
+      gap: rem(100)
+      padding: 0 rem(20)
+
+    &__stylists, &__barbers
+      display: flex
+      align-items: flex-end
+      justify-content: center
+      height: rem(620)
+      padding-bottom: rem(10)
+
+      font:
+        family: $primary
+        weight: 400
+        size: rem(35)
+
+      @media (min-width: $large)
+        position: relative
+        width: rem(800)
+        height: rem(800)
+
+        font-size: rem(45)
+
+        cursor: pointer
+
+        &:hover 
+          &::after
+            content: ''
+            position: absolute
+            inset: 0
+
+        &__headline
+          z-index: 1
+
+    &__stylists
+      margin-top: rem(40)
+      background: linear-gradient(rgba(252, 163, 17, .5), rgba(252, 163, 17, .5)), url('3.jpg')
+        size: cover
+        position: center center
+
+      color: $darkBlue
+
+      &::after
+        background: rgba(252, 163, 17, .3)
+
+    &__barbers
+      background: linear-gradient(rgba(20, 33, 61, .5), rgba(20, 33, 61, .5)), url('4.jpg')
+        size: cover
+        position: center center
+      
+      color: $grayWhite
+
+      &::after
+        background: rgba(20, 33, 61, .3)
+      
+      @media (min-width: $large)
+        display: flex
+        align-items: flex-start
+        margin-top: rem(40)
+
+.reviews
+  margin-top: rem(40)
+
+  @media (min-width: $medium)
+    margin-top: rem(100)
+
+  &__detail
+    display: block
+    position: relative
+
+    &::before
+      content: ''
+      position: absolute
+      width: rem(260)
+      height: rem(5)
+      background: $darkBlue
+      z-index: -1
+      top: 50%
+      left: 50%
+      transform: translateX(-50%) translateY(-50%)
+
+      @media (min-width: $large)
+        width: rem(500)
+
+    &::after
+      content: '\f086'
+      display: inline-block
+      width: rem(60)
+      background: #fff
+
+      font:
+        family: 'Font Awesome 6 Free'
+        style: normal
+        variant: normal
+        smoothing: antialiased
+        weight: 900
+        size: rem(30)
+      text:
+        rendering: auto
+      color: $darkBlue
+
+  &__title
+    margin-top: rem(20)
+
+    font:
+      family: $primary
+      weight: 400
+      size: rem(30)
+    color: $darkBlue
+
+    @media (min-width: $medium)
+      font-size: rem(40)
+
+  &__information
+    display: block
+    overflow: hidden
+    width: rem(300)
+    margin: rem(20) auto 0
+
+    @media (min-width: $medium)
+      margin-top: rem(40)
+      width: rem(600)
+
+    &__carousel-item
+      display: none
+      margin-bottom: auto
+
+      &__user
+        display: none
+
+        @media (min-width: $medium)
+          display: flex
+          align-items: center
+          justify-content: center
+          gap: rem(10)
+
+        &__image
+          width: rem(60)
+          height: rem(60)
+          object:
+            fit: cover
+            position: 0 0
+          border-radius: 50%
+
+        &__data
+          font:
+            family: $primary
+            weight: 300
+            size: rem(20)
+          color: $darkBlue
+
+          @media (min-width: $medium)
+            font-size: rem(30)
+
+      &__comment
+        padding: 0 rem(20)
+
+        font:
+          family: $secondary
+          weight: 400
+          size: rem(15)
+        color: $darkBlue
+
+        @media (min-width: $medium)
+          margin: rem(20) auto 0
+          // width: rem(500)
+
+          font-size: rem(20)
+
+        @media (min-width: $large)
+          // width: rem(700)
+
+  &__picker
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: rem(15)
+    margin-top: rem(40)
+
+    @media (min-width: $medium)
+      gap: rem(30)
+
+    &__previous, &__forward
+      width: rem(40)
+      height: rem(40)
+      background: $darkBlue
+
+      font-size: rem(15)
+      color: $grayWhite
+
+      border: none
+      border-radius: 50%
+
+      transition: background .3s ease
+
+      @media (min-width: $medium)
+        width: rem(80)
+        height: rem(80)
+
+        font-size: rem(30)
+
+      &:hover
+        background: $yellow
+
+        color: $darkBlue
+
+.session
+  margin-top: rem(40)
+  padding: rem(40) rem(20)
+  background: $darkBlue
+
+  @media (min-width: $medium)
+    margin-top: rem(100)
+
+  &__title
+    font:
+      family: $primary
+      weight: 400
+      size: rem(30)
+    color: $grayWhite
+
+    @media (min-width: $medium)
+      font-size: rem(40)
+
+  &__video
+    width: rem(250)
+    height: rem(150)
+    margin-top: rem(40)
+
+    @media (min-width: $medium)
+      width: rem(400)
+      height: rem(250)
+
+    @media (min-width: $large)
+      width: rem(700)
+      height: rem(400)
+  
+  &__description
+    display: none
+
+    @media (min-width: $medium)
+      display: block
+      margin-top: rem(40)
+
+      font:
+        family: $secondary
+        weight: 300
+        size: rem(20)
+      color: darken($grayWhite, 30%)
+
+    @media (min-width: $large)
+      width: rem(900)
+      margin: rem(40) auto 0
+
+      font-size: rem(25)
+
+.companies
+  margin-top: rem(40)
+  padding: 0 rem(20)
+
+  @media (min-width: $large)
+    margin-top: rem(60)
+
+  &__title
+    font:
+      family: $primary
+      weight: 400
+      size: rem(30)
+    color: $darkBlue
+
+    @media (min-width: $large)
+      font-size: rem(40)
+
+  &__brands
+    display: flex
+    flex-direction: column
+    gap: rem(20)
+    margin-top: rem(20)
+
+    &__logo
+      font-size: rem(80)
+      color: $darkBlue
+
+      @media (min-width: $large)
+        font-size: rem(100)
+
+    @media (min-width: $large)
+      flex-direction: row
+      justify-content: center
+      gap: rem(40)
+      margin-top: rem(40)
+
+  &__interested
+    margin-top: rem(20)
+
+    font:
+      family: $secondary
+      weight: 400
+      size: rem(20)
+    color: $darkBlue
+
+    &__email
+      text-decoration: none
+      text-decoration-color: transparent
+      color: $yellow
+
+      @media (min-width: $large)
+        transition: text-decoration .3s ease
+
+        &:hover 
+          text-decoration: underline
+          text-decoration-color: $yellow
+
+    @media (min-width: $large)
+      margin-top: rem(40)
+
+      font-size: rem(25)
+
+.barberlia-shop
+  margin-top: rem(60)
+  padding: rem(40) rem(20)
+  background: linear-gradient(.25turn, rgba(95, 103, 124, .26), rgba(20, 33, 61, 1)), url("8.jpeg")
+    size: cover
+
+  color: $grayWhite
+
+  @media (min-width: $medium)
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    padding: rem(80) rem(20)
+
+  @media (min-width: $large)
+    position: relative
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: repeat(3, 1fr)
+    background: url("8.jpeg"), linear-gradient(.25turn, rgba(95, 103, 124, 1), rgba(20, 33, 61, 1))
+    background-repeat: no-repeat
+    background-size: 80%
+    background-position: -100%
+
+    &::before
+      content: ''
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      background: linear-gradient(.25turn, rgba(95, 103, 124, .5) 30%, rgba(20, 33, 61, 1)50%, rgba(20, 33, 61, 1) 100%)
+      position: absolute
+      z-index: 0
+
+  &__title
+    font:
+      family: $primary
+      weight: 400
+      size: rem(30)
+
+    @media (min-width: $large)
+      grid-column-start: 2
+      grid-column-end: 3
+      z-index: 1
+
+      font-size: rem(40)
+      text-align: left
+
+  &__description
+    margin-top: rem(20)
+
+    font:
+      family: $secondary
+      weight: 400
+      size: rem(15)
+
+    @media (min-width: $medium)
+      width: rem(500)
+
+    @media (min-width: $large)
+      grid-column-start: 2
+      grid-column-end: 3
+      width: rem(500)
+      z-index: 1
+
+      font-size: rem(20)
+      text-align: left
+
+  &__cta
+    margin-top: rem(40)
+    width: rem(140)
+    height: rem(40)
+    background: $yellow
+
+    font:
+      family: $primary
+      weight: 400
+      size: rem(20)
+
+    border: none
+
+    @media (min-width: $large)
+      grid-column-start: 2
+      grid-column-end: 3
+      width: rem(200)
+      height: rem(60)
+      z-index: 1
+
+      font-size: rem(25)
+
+      transition: background .3s ease
+      cursor: pointer
+
+      &:hover
+        background: darken($yellow, 5%)
+
+        color: lighten($darkBlue, 10%)
+
+.social-media
+  display: flex
+  align-items: center
+  justify-content: center
+  gap: rem(40)
+  height: rem(60)
+  background: $yellow
+
+  @media (min-width: $large)
+    gap: rem(80)
+    height: rem(80)
+
+  &__icon
+    font-size: rem(40)
+    text-decoration: none
+    color: $darkBlue
+
+    @media (min-width: $large)
+      font-size: rem(50)
+
+.footer-content
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding: rem(40) rem(20)
+  background: #111
+
+  &__columns
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    gap: rem(50)
+    padding-bottom: rem(20)
+    
+    color: $grayWhite
+
+    border-bottom: solid rem(3) #333
+
+    &__column
+      margin-bottom: auto
+
+      text-align: left
+
+      &__heading
+        font:
+          family: $primary
+          weight: 400
+          size: rem(30)
+
+      &__sub-heading
+        margin-top: rem(5)
+
+        font:
+          family: $secondary
+          weight: 400
+          size: rem(20)
+        color: darken($grayWhite, 10%)
+
+        &:nth-child(2)
+          margin-top: rem(10)
+
+  &__logo
+    font:
+      family: $primary
+      weight: 400
+      size: rem(30)
+    text-transform: uppercase
+    color: #222

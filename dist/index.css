@@ -1,0 +1,1173 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.links-show {
+  display: flex !important;
+  position: fixed !important;
+  flex-direction: column;
+  inset: 0;
+  background: #14213D;
+  z-index: 2;
+}
+.links-show .navigation__links__link a {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 2.5rem;
+  color: #E5E5E5;
+}
+.links-show .navigation__links__link:not(:nth-child(1)) {
+  margin-top: 1.25rem;
+}
+
+.menu-show {
+  position: fixed;
+  z-index: 3;
+  top: 1.25rem;
+  right: 1.25rem;
+  margin-top: 0 !important;
+}
+.menu-show::before, .menu-show::after {
+  display: none !important;
+}
+.menu-show .menu__lines__line {
+  border-color: #E5E5E5;
+}
+
+.reviews__information .reviews__information__carousel-item--visible {
+  display: block;
+  -webkit-animation: Fade 0.3s;
+          animation: Fade 0.3s;
+}
+
+.reviews__information__carousel-item--hidden {
+  display: none;
+}
+
+@-webkit-keyframes Fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: opacity ease;
+  }
+}
+
+@keyframes Fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: opacity ease;
+  }
+}
+body {
+  text-align: center;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 64em) {
+  .navigation {
+    padding-left: 1.25rem;
+  }
+}
+.navigation__logo {
+  display: block;
+  margin: 0 auto;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #14213D;
+}
+@media (min-width: 40em) {
+  .navigation__logo {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 64em) {
+  .navigation__logo {
+    margin: 0;
+    font-size: 3.75rem;
+  }
+}
+.navigation__links {
+  display: none;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+.navigation__links a {
+  text-decoration: none;
+}
+@media (min-width: 64em) {
+  .navigation__links {
+    display: flex;
+    gap: 2rem;
+    width: 100vw;
+    height: 5.5625rem;
+    z-index: 0;
+    left: 0;
+  }
+  .navigation__links a {
+    color: #14213D;
+  }
+}
+@media (min-width: 64em) {
+  .navigation__links__link {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    color: #14213D;
+    font-size: 1.5rem;
+    border-bottom: solid 0.1875rem transparent;
+    transition: border 0.3s ease-in-out;
+  }
+  .navigation__links__link:hover {
+    border-bottom: solid 0.1875rem #14213D;
+  }
+}
+.navigation__book {
+  display: none;
+}
+@media (min-width: 64em) {
+  .navigation__book {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15.625rem;
+    height: 5.5625rem;
+    z-index: 1;
+    background: #14213D;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-size: 1.25rem;
+    color: #E5E5E5;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  .navigation__book:hover {
+    background: #FCA311;
+    color: #14213D;
+  }
+}
+
+.menu {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 2.8125rem;
+  margin-top: 2.5rem;
+  padding: 0.5rem 0;
+}
+@media (min-width: 64em) {
+  .menu {
+    display: none;
+  }
+}
+.menu__lines {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+}
+.menu__lines__line {
+  width: 3.125rem;
+  border-width: 0.125rem;
+  border-color: #14213D;
+  border-radius: 3.125rem;
+}
+.menu::before, .menu::after {
+  content: "\f0c4";
+  display: inline-block;
+  color: #FCA311;
+  font-family: "Font Awesome 6 Free";
+  font-style: normal;
+  font-variant: normal;
+  font-smoothing: antialiased;
+  font-weight: 900;
+  font-size: 2rem;
+  text-rendering: auto;
+}
+.menu::before {
+  margin-right: 6.25rem;
+  transform: rotate(180deg);
+}
+@media (min-width: 40em) {
+  .menu::before {
+    margin-right: 12.5rem;
+  }
+}
+@media (max-width: 25em) {
+  .menu::before {
+    margin-right: 3.125rem;
+  }
+}
+.menu::after {
+  margin-left: 6.25rem;
+}
+@media (min-width: 40em) {
+  .menu::after {
+    margin-left: 12.5rem;
+  }
+}
+@media (max-width: 25em) {
+  .menu::after {
+    margin-left: 3.125rem;
+  }
+}
+
+.title {
+  display: block;
+  margin-top: 2.5rem;
+  padding: 0 1.25rem;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #14213D;
+}
+@media (min-width: 64em) {
+  .title {
+    margin-top: 3.75rem;
+  }
+}
+@media (min-width: 87.5em) {
+  .title {
+    position: relative;
+    margin-top: 6.25rem;
+    font-size: 1.75rem;
+    line-height: 1.5;
+  }
+  .title::before, .title::after {
+    content: "\f0c4";
+    display: inline-block;
+    position: absolute;
+    font-family: "Font Awesome 6 Free";
+    font-style: normal;
+    font-variant: normal;
+    font-smoothing: antialiased;
+    font-weight: 900;
+    font-size: 2.8125rem;
+    text-rendering: auto;
+    color: #FCA311;
+  }
+  .title::before {
+    margin-left: -3.4375rem;
+    top: -0.875rem;
+    transform: rotate(180deg);
+  }
+  .title::after {
+    margin-left: 0.625rem;
+    top: -0.8125rem;
+  }
+}
+
+.book-mobile {
+  width: 100%;
+  height: 5.5625rem;
+  margin-top: 2.5rem;
+  background: #14213D;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 1.875rem;
+  color: #E5E5E5;
+  border: none;
+}
+@media (min-width: 40em) {
+  .book-mobile {
+    font-size: 1.875rem;
+  }
+}
+@media (min-width: 64em) {
+  .book-mobile {
+    display: none;
+  }
+}
+
+.landing {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 64em) {
+  .landing {
+    flex-direction: row;
+    margin-top: 3.75rem;
+  }
+}
+.landing__first, .landing__second {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 0 1.25rem 0.625rem;
+}
+.landing__first__header, .landing__second__header {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 1.25rem;
+  text-align: right;
+  color: #E5E5E5;
+}
+@media (min-width: 64em) {
+  .landing__first__header, .landing__second__header {
+    font-size: 1.875rem;
+  }
+}
+@media (min-width: 87.5em) {
+  .landing__first__header, .landing__second__header {
+    font-size: 2.5rem;
+  }
+}
+.landing__first {
+  height: 17.3125rem;
+  background: linear-gradient(rgba(20, 33, 61, 0.5), rgba(20, 33, 61, 0.5)), url("1.jpg");
+  background-size: 37.5rem;
+  background-position: center;
+}
+@media (min-width: 40em) {
+  .landing__first {
+    background-size: 62.5rem;
+  }
+}
+@media (min-width: 64em) {
+  .landing__first {
+    order: 1;
+    height: 40.625rem;
+  }
+}
+.landing__second {
+  height: 17.3125rem;
+  background: linear-gradient(rgba(20, 33, 61, 0.5), rgba(20, 33, 61, 0.5)), url("2.jpg");
+  background-size: 62.5rem;
+  background-position: center;
+}
+@media (min-width: 64em) {
+  .landing__second {
+    order: 3;
+    align-items: flex-start;
+    width: 65%;
+    height: 40.625rem;
+    padding-top: 0.625rem;
+    padding-bottom: 0;
+  }
+}
+.landing__learn-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 17.3125rem;
+  background: #14213D;
+}
+@media (min-width: 40em) {
+  .landing__learn-more {
+    height: 12.5rem;
+  }
+}
+@media (min-width: 64em) {
+  .landing__learn-more {
+    order: 2;
+    width: 30.9375rem;
+    height: 40.625rem;
+    padding-top: 2.5rem;
+  }
+}
+.landing__learn-more__hand {
+  display: none;
+}
+@media (min-width: 64em) {
+  .landing__learn-more__hand {
+    display: inline;
+    color: #FCA311;
+  }
+}
+.landing__learn-more__question {
+  display: none;
+  margin-top: auto;
+  font-size: 1.5625rem;
+}
+@media (min-width: 64em) {
+  .landing__learn-more__question {
+    display: block;
+  }
+}
+.landing__learn-more__question, .landing__learn-more__description {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  color: #E5E5E5;
+}
+.landing__learn-more__description {
+  margin-top: auto;
+  padding: 0 1.25rem;
+  font-size: 1.25rem;
+}
+.landing__learn-more__cta {
+  width: 100%;
+  height: 5rem;
+  margin-top: auto;
+  background: #FCA311;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 1.875rem;
+  color: #14213D;
+  border: none;
+}
+@media (min-width: 64em) {
+  .landing__learn-more__cta {
+    transition: background 0.3s ease;
+    cursor: pointer;
+  }
+  .landing__learn-more__cta:hover {
+    background: #f09703;
+    color: #213663;
+  }
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: #FCA311;
+}
+@media (min-width: 64em) {
+  .information {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.information__booking-hours {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 29.25rem;
+  padding: 0 1.25rem;
+  background: #14213D;
+}
+@media (min-width: 64em) {
+  .information__booking-hours {
+    order: 2;
+    flex-grow: 0;
+    width: 30.9375rem;
+  }
+}
+.information__booking-hours__title {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 1.875rem;
+  color: #E5E5E5;
+}
+.information__booking-hours__title::after {
+  content: "";
+  display: block;
+  width: 4.375rem;
+  height: 0.1875rem;
+  margin: 0.3125rem auto 0;
+  background: #999999;
+}
+.information__booking-hours__days__day {
+  margin-top: 1.25rem;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  color: #E5E5E5;
+  list-style: none;
+}
+.information__booking-hours__days__day:nth-of-type(1) {
+  margin-top: 2.5rem;
+}
+@media (min-width: 87.5em) {
+  .information__booking-hours__days__day {
+    font-size: 1.25rem;
+  }
+}
+.information__features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 2.5rem 1.25rem;
+  color: #14213D;
+}
+@media (min-width: 64em) {
+  .information__features {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    order: 1;
+    gap: 3rem;
+    width: 100%;
+  }
+}
+@media (min-width: 64em) and (min-width: 87.5em) {
+  .information__features {
+    gap: 0;
+  }
+}
+@media (min-width: 64em) {
+  .information__features__why-us, .information__features__products {
+    width: 21.875rem;
+  }
+}
+.information__features__why-us__icon, .information__features__products__icon {
+  font-size: 6.25rem;
+}
+.information__features__why-us__title, .information__features__products__title {
+  margin-top: 0.625rem;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 1.875rem;
+}
+.information__features__why-us__description, .information__features__products__description {
+  margin-top: 0.625rem;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  color: #1a2b50;
+}
+.information__features__products {
+  margin-top: 2.5rem;
+}
+@media (min-width: 64em) {
+  .information__features__products {
+    margin-top: 0;
+  }
+}
+
+.services {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2.5rem 1.25rem;
+  background: #14213D;
+  color: #E5E5E5;
+}
+.services__title {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 1.875rem;
+}
+.services__title::after {
+  content: "";
+  display: block;
+  width: 3.125rem;
+  height: 0.1875rem;
+  margin: 0.3125rem auto 0;
+  background: #999999;
+}
+@media (min-width: 64em) {
+  .services__title {
+    font-size: 2.5rem;
+  }
+  .services__title::after {
+    width: 3.75rem;
+  }
+}
+.services__type {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 64em) {
+  .services__type {
+    flex-direction: row;
+    gap: 9.375rem;
+  }
+}
+.services__type__hair-men, .services__type__hair-women, .services__type__beard {
+  margin-top: 2.5rem;
+}
+@media (min-width: 64em) {
+  .services__type__hair-men, .services__type__hair-women, .services__type__beard {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+.services__type__hair-men__category, .services__type__hair-women__category, .services__type__beard__category {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+@media (min-width: 64em) {
+  .services__type__hair-men__category, .services__type__hair-women__category, .services__type__beard__category {
+    font-size: 1.875rem;
+  }
+}
+.services__type__hair-men__options, .services__type__hair-women__options, .services__type__beard__options {
+  margin-top: 1.25rem;
+}
+@media (min-width: 64em) {
+  .services__type__hair-men__options, .services__type__hair-women__options, .services__type__beard__options {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+.services__type__hair-men__options__option, .services__type__hair-women__options__option, .services__type__beard__options__option {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 300;
+  font-size: 0.9375rem;
+  list-style: none;
+}
+.services__type__hair-men__options__option:not(:nth-child(1)), .services__type__hair-women__options__option:not(:nth-child(1)), .services__type__beard__options__option:not(:nth-child(1)) {
+  margin-top: 0.625rem;
+}
+@media (min-width: 64em) {
+  .services__type__hair-men__options__option, .services__type__hair-women__options__option, .services__type__beard__options__option {
+    font-size: 1.5625rem;
+  }
+}
+.services__disclaimer {
+  margin-top: 2.5rem;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 300;
+  font-size: 1.25rem;
+  color: #a5a5a5;
+}
+@media (min-width: 64em) {
+  .services__disclaimer {
+    font-size: 1.875rem;
+  }
+}
+
+.our-crew {
+  padding: 2.5rem 0 0;
+}
+.our-crew__title {
+  padding: 0 1.25rem;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 1.875rem;
+  color: #14213D;
+}
+@media (min-width: 64em) {
+  .our-crew__photos {
+    display: flex;
+    justify-content: space-between;
+    gap: 6.25rem;
+    padding: 0 1.25rem;
+  }
+}
+.our-crew__photos__stylists, .our-crew__photos__barbers {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 38.75rem;
+  padding-bottom: 0.625rem;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 2.1875rem;
+}
+@media (min-width: 64em) {
+  .our-crew__photos__stylists, .our-crew__photos__barbers {
+    position: relative;
+    width: 50rem;
+    height: 50rem;
+    font-size: 2.8125rem;
+    cursor: pointer;
+  }
+  .our-crew__photos__stylists:hover::after, .our-crew__photos__barbers:hover::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+  }
+  .our-crew__photos__stylists__headline, .our-crew__photos__barbers__headline {
+    z-index: 1;
+  }
+}
+.our-crew__photos__stylists {
+  margin-top: 2.5rem;
+  background: linear-gradient(rgba(252, 163, 17, 0.5), rgba(252, 163, 17, 0.5)), url("3.jpg");
+  background-size: cover;
+  background-position: center center;
+  color: #14213D;
+}
+.our-crew__photos__stylists::after {
+  background: rgba(252, 163, 17, 0.3);
+}
+.our-crew__photos__barbers {
+  background: linear-gradient(rgba(20, 33, 61, 0.5), rgba(20, 33, 61, 0.5)), url("4.jpg");
+  background-size: cover;
+  background-position: center center;
+  color: #E5E5E5;
+}
+.our-crew__photos__barbers::after {
+  background: rgba(20, 33, 61, 0.3);
+}
+@media (min-width: 64em) {
+  .our-crew__photos__barbers {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 2.5rem;
+  }
+}
+
+.reviews {
+  margin-top: 2.5rem;
+}
+@media (min-width: 40em) {
+  .reviews {
+    margin-top: 6.25rem;
+  }
+}
+.reviews__detail {
+  display: block;
+  position: relative;
+}
+.reviews__detail::before {
+  content: "";
+  position: absolute;
+  width: 16.25rem;
+  height: 0.3125rem;
+  background: #14213D;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+@media (min-width: 64em) {
+  .reviews__detail::before {
+    width: 31.25rem;
+  }
+}
+.reviews__detail::after {
+  content: "\f086";
+  display: inline-block;
+  width: 3.75rem;
+  background: #fff;
+  font-family: "Font Awesome 6 Free";
+  font-style: normal;
+  font-variant: normal;
+  font-smoothing: antialiased;
+  font-weight: 900;
+  font-size: 1.875rem;
+  text-rendering: auto;
+  color: #14213D;
+}
+.reviews__title {
+  margin-top: 1.25rem;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 1.875rem;
+  color: #14213D;
+}
+@media (min-width: 40em) {
+  .reviews__title {
+    font-size: 2.5rem;
+  }
+}
+.reviews__information {
+  display: block;
+  overflow: hidden;
+  width: 18.75rem;
+  margin: 1.25rem auto 0;
+}
+@media (min-width: 40em) {
+  .reviews__information {
+    margin-top: 2.5rem;
+    width: 37.5rem;
+  }
+}
+.reviews__information__carousel-item {
+  display: none;
+  margin-bottom: auto;
+}
+.reviews__information__carousel-item__user {
+  display: none;
+}
+@media (min-width: 40em) {
+  .reviews__information__carousel-item__user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+  }
+}
+.reviews__information__carousel-item__user__image {
+  width: 3.75rem;
+  height: 3.75rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 0;
+     object-position: 0 0;
+  border-radius: 50%;
+}
+.reviews__information__carousel-item__user__data {
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  font-size: 1.25rem;
+  color: #14213D;
+}
+@media (min-width: 40em) {
+  .reviews__information__carousel-item__user__data {
+    font-size: 1.875rem;
+  }
+}
+.reviews__information__carousel-item__comment {
+  padding: 0 1.25rem;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  color: #14213D;
+}
+@media (min-width: 40em) {
+  .reviews__information__carousel-item__comment {
+    margin: 1.25rem auto 0;
+    font-size: 1.25rem;
+  }
+}
+.reviews__picker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9375rem;
+  margin-top: 2.5rem;
+}
+@media (min-width: 40em) {
+  .reviews__picker {
+    gap: 1.875rem;
+  }
+}
+.reviews__picker__previous, .reviews__picker__forward {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #14213D;
+  font-size: 0.9375rem;
+  color: #E5E5E5;
+  border: none;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+@media (min-width: 40em) {
+  .reviews__picker__previous, .reviews__picker__forward {
+    width: 5rem;
+    height: 5rem;
+    font-size: 1.875rem;
+  }
+}
+.reviews__picker__previous:hover, .reviews__picker__forward:hover {
+  background: #FCA311;
+  color: #14213D;
+}
+
+.session {
+  margin-top: 2.5rem;
+  padding: 2.5rem 1.25rem;
+  background: #14213D;
+}
+@media (min-width: 40em) {
+  .session {
+    margin-top: 6.25rem;
+  }
+}
+.session__title {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 1.875rem;
+  color: #E5E5E5;
+}
+@media (min-width: 40em) {
+  .session__title {
+    font-size: 2.5rem;
+  }
+}
+.session__video {
+  width: 15.625rem;
+  height: 9.375rem;
+  margin-top: 2.5rem;
+}
+@media (min-width: 40em) {
+  .session__video {
+    width: 25rem;
+    height: 15.625rem;
+  }
+}
+@media (min-width: 64em) {
+  .session__video {
+    width: 43.75rem;
+    height: 25rem;
+  }
+}
+.session__description {
+  display: none;
+}
+@media (min-width: 40em) {
+  .session__description {
+    display: block;
+    margin-top: 2.5rem;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 300;
+    font-size: 1.25rem;
+    color: #999999;
+  }
+}
+@media (min-width: 64em) {
+  .session__description {
+    width: 56.25rem;
+    margin: 2.5rem auto 0;
+    font-size: 1.5625rem;
+  }
+}
+
+.companies {
+  margin-top: 2.5rem;
+  padding: 0 1.25rem;
+}
+@media (min-width: 64em) {
+  .companies {
+    margin-top: 3.75rem;
+  }
+}
+.companies__title {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 1.875rem;
+  color: #14213D;
+}
+@media (min-width: 64em) {
+  .companies__title {
+    font-size: 2.5rem;
+  }
+}
+.companies__brands {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+.companies__brands__logo {
+  font-size: 5rem;
+  color: #14213D;
+}
+@media (min-width: 64em) {
+  .companies__brands__logo {
+    font-size: 6.25rem;
+  }
+}
+@media (min-width: 64em) {
+  .companies__brands {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+  }
+}
+.companies__interested {
+  margin-top: 1.25rem;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: #14213D;
+}
+.companies__interested__email {
+  text-decoration: none;
+  -webkit-text-decoration-color: transparent;
+          text-decoration-color: transparent;
+  color: #FCA311;
+}
+@media (min-width: 64em) {
+  .companies__interested__email {
+    transition: -webkit-text-decoration 0.3s ease;
+    transition: text-decoration 0.3s ease;
+    transition: text-decoration 0.3s ease, -webkit-text-decoration 0.3s ease;
+  }
+  .companies__interested__email:hover {
+    text-decoration: underline;
+    -webkit-text-decoration-color: #FCA311;
+            text-decoration-color: #FCA311;
+  }
+}
+@media (min-width: 64em) {
+  .companies__interested {
+    margin-top: 2.5rem;
+    font-size: 1.5625rem;
+  }
+}
+
+.barberlia-shop {
+  margin-top: 3.75rem;
+  padding: 2.5rem 1.25rem;
+  background: linear-gradient(0.25turn, rgba(95, 103, 124, 0.26), #14213d), url("8.jpeg");
+  background-size: cover;
+  color: #E5E5E5;
+}
+@media (min-width: 40em) {
+  .barberlia-shop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5rem 1.25rem;
+  }
+}
+@media (min-width: 64em) {
+  .barberlia-shop {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    background: url("8.jpeg"), linear-gradient(0.25turn, #5f677c, #14213d);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: -100%;
+  }
+  .barberlia-shop::before {
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(0.25turn, rgba(95, 103, 124, 0.5) 30%, #14213d 50%, #14213d 100%);
+    position: absolute;
+    z-index: 0;
+  }
+}
+.barberlia-shop__title {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 1.875rem;
+}
+@media (min-width: 64em) {
+  .barberlia-shop__title {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    z-index: 1;
+    font-size: 2.5rem;
+    text-align: left;
+  }
+}
+.barberlia-shop__description {
+  margin-top: 1.25rem;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+}
+@media (min-width: 40em) {
+  .barberlia-shop__description {
+    width: 31.25rem;
+  }
+}
+@media (min-width: 64em) {
+  .barberlia-shop__description {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    width: 31.25rem;
+    z-index: 1;
+    font-size: 1.25rem;
+    text-align: left;
+  }
+}
+.barberlia-shop__cta {
+  margin-top: 2.5rem;
+  width: 8.75rem;
+  height: 2.5rem;
+  background: #FCA311;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  border: none;
+}
+@media (min-width: 64em) {
+  .barberlia-shop__cta {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    width: 12.5rem;
+    height: 3.75rem;
+    z-index: 1;
+    font-size: 1.5625rem;
+    transition: background 0.3s ease;
+    cursor: pointer;
+  }
+  .barberlia-shop__cta:hover {
+    background: #f09703;
+    color: #213663;
+  }
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  height: 3.75rem;
+  background: #FCA311;
+}
+@media (min-width: 64em) {
+  .social-media {
+    gap: 5rem;
+    height: 5rem;
+  }
+}
+.social-media__icon {
+  font-size: 2.5rem;
+  text-decoration: none;
+  color: #14213D;
+}
+@media (min-width: 64em) {
+  .social-media__icon {
+    font-size: 3.125rem;
+  }
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 1.25rem;
+  background: #111;
+}
+.footer-content__columns {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3.125rem;
+  padding-bottom: 1.25rem;
+  color: #E5E5E5;
+  border-bottom: solid 0.1875rem #333;
+}
+.footer-content__columns__column {
+  margin-bottom: auto;
+  text-align: left;
+}
+.footer-content__columns__column__heading {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 1.875rem;
+}
+.footer-content__columns__column__sub-heading {
+  margin-top: 0.3125rem;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: #cccccc;
+}
+.footer-content__columns__column__sub-heading:nth-child(2) {
+  margin-top: 0.625rem;
+}
+.footer-content__logo {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 1.875rem;
+  text-transform: uppercase;
+  color: #222;
+}
